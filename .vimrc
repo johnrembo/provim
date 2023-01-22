@@ -42,7 +42,7 @@ set nolist			   " White space characters
 set listchars=eol:$,tab:.\ ,trail:.,extends:>,precedes:<,nbsp:_ " Compatible space chars
 set wrap linebreak	   " Soft wrap long lines
 set whichwrap+=[,],h,l " Allow jump between lines when on start or end of line
-set path+=**		   " Fussy search in command line
+set path+=**		   " Fuzzy search in command line
 set wildmenu		   " Tab completion menu
 set cursorline
 set noshowmode " Hide mode indicator, duplicated by status line plugin
@@ -177,3 +177,10 @@ tnoremap <C-l> <c-\><c-n><c-w>l
 " open terminal window below
 nnoremap th :belowright terminal<CR><C-\><C-n>:ownsyntax off<CR>:exe 'resize' . (winheight(0) * 1/2)<CR>i
 
+" Commands and functions
+
+" make tags with respect to .gitignore and do not follow sym links
+command! MakeTags !git ls-files | ctags --links=no -L -
+
+" Enable plugins (comment out to turn off all plugins at once)
+source ~/.vim/plugins.vim

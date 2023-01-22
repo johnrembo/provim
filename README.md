@@ -16,6 +16,7 @@ Standard environment for configs to work as expected:
 - High color teminal emulator
 - Vim >=8.2 (+keymap, +clipboard, +mouse, +syntax, +wildmenu, ...)
 - NeoVim >= 8.1 LuaJIT 2.1.0-beta3
+- Git
 - Python3 >= 3.10.6 (pip, pynvim...)
 - Node.js >= 18.12.1 (npm, yarn...)
 - fzf >= 0.29
@@ -31,6 +32,17 @@ Just copy selected lines in your own config or fork all configs to your GitHub p
 Main configuration in `.vimrc` keeps general defaults no matter the other environment. A properly installed Vim higher than v8 with standard option set should support all configuration options.
 
 Optional configuration which depend on other plugins and third party software reside in `.vim/` directory. It is essentialy safe not to use it at all on limited environments.
+
+### Plugins
+
+To enable plugins download "vim-plug" once and restart vim
+
+```
+$ curl -fLo ~/.var/app/io.neovim.nvim/data/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+Run `:PlugInstall` from Vim command line
 
 # NeoVim
 
