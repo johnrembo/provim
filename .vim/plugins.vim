@@ -27,6 +27,13 @@ Plug 'dbakker/vim-projectroot'
 " comment/uncomment blocks and selections
 Plug 'preservim/nerdcommenter'
 
+" NerdTree
+Plug 'preservim/nerdtree'
+" NerdTree git support
+Plug 'Xuyuanp/nerdtree-git-plugin'
+" VimDevIcons for NerdTree and Airline
+Plug 'ryanoasis/vim-devicons'
+
 " more informative status bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -119,6 +126,10 @@ let g:which_key_map.f.k = 'FZF keymaps'
 
 " nerd commenter
 map <leader>/ <Plug>NERDCommenterToggle
+let g:which_key_map.e = 'NERDTree toggle'
+
+" nerd tree toggle
+nmap <leader>e :NERDTreeToggle<CR>
 
 " Commands and functions
 

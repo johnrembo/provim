@@ -177,10 +177,19 @@ tnoremap <C-l> <c-\><c-n><c-w>l
 " open terminal window below
 nnoremap th :belowright terminal<CR><C-\><C-n>:ownsyntax off<CR>:exe 'resize' . (winheight(0) * 1/2)<CR>i
 
+" Enable spell checking
+set spell spelllang=en_us,ru
+
 " Commands and functions
 
 " make tags with respect to .gitignore and do not follow sym links
 command! MakeTags !git ls-files | ctags --links=no -L -
+
+" add spell dictionary to auto completion
+au BufNewFile,BufRead *.txt,*.md set complete+=k
+
+" disable spell check in specific files
+au BufNewFile,BufRead *.fun,*.pks,*.pkb,*.sql,*.pls,*.plsql,.*rc set nospell
 
 " Enable plugins (comment out to turn off all plugins at once)
 source ~/.vim/plugins.vim
