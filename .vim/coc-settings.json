@@ -1,0 +1,26 @@
+{
+	"coc.source.omni.enable": true,
+	"coc.source.omni.priority": 3,
+	"coc.source.omni.filetypes": ["sql", "plsql"],
+//	"suggest.autoTrigger": "none",
+//  "suggest.timeout": 500
+
+//	"java.configuration.runtimes": [
+//		{
+//			"name": "JavaSE-11",
+//			"path": "/lib/jvm/java-1.11.0-openjdk-amd64",
+//		},
+//		{
+//			"name": "JavaSE-17",
+//			"path": "/lib/jvm/java-17-openjdk-amd64",
+//			"default": true
+//		},
+//	],
+	// codelens
+//	"codeLens.enable": true,
+//	"java.referencesCodeLens.enabled": true,
+//	"java.jdt.ls.vmargs": "-javaagent:/opt/lombok/lombok.jar",	
+	"[php]" : {
+		"coc.preferences.formatOnSave": true
+	}	
+}

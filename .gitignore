@@ -1,6 +1,14 @@
 *
+!documents/*
 !.gitignore
 !.gitconfig
 !.vimrc
+!.vim/ftplugin/*
+!.vim/plugins.vim
+!.vim/coc.vim
+!.vim/coc-settings.json
 !.config/nvim/
+!.config/coc/extensions/node_modules/coc-db/autoload/vim_dadbod_completion.vim
+!.config/coc/extensions/node_modules/coc-db/autoload/vim_dadbod_completion/schemas.vim
+!.config/coc/extensions/node_modules/coc-db/autoload/vim_dadbod_completion/reserved_keywords.vim
 

@@ -34,6 +34,13 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " VimDevIcons for NerdTree and Airline
 Plug 'ryanoasis/vim-devicons'
 
+" Database
+Plug 'vim-scripts/dbext.vim'
+Plug 'tpope/vim-dadbod'
+
+" Conqueror of completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " more informative status bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -126,10 +133,15 @@ let g:which_key_map.f.k = 'FZF keymaps'
 
 " nerd commenter
 map <leader>/ <Plug>NERDCommenterToggle
-let g:which_key_map.e = 'NERDTree toggle'
-
+let g:which_key_map.e = 'Toggle comment'
 " nerd tree toggle
 nmap <leader>e :NERDTreeToggle<CR>
+let g:which_key_map.e = 'NERDTree toggle'
+" nerd tree show hidden by default
+let NERDTreeShowHidden = 1
+
+" Coc config
+source ~/.vim/coc.vim
 
 " Commands and functions
 
@@ -144,4 +156,6 @@ function! <SID>AutoProjectRootCD()
     endtry
 endfunction
 autocmd BufEnter * call <SID>AutoProjectRootCD()
+
+
 
