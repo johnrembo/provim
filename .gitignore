@@ -1,5 +1,6 @@
 *
 !documents/*
+!src/sql/*
 !.gitignore
 !.gitconfig
 !.vimrc

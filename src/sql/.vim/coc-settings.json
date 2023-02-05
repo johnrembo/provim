@@ -1,0 +1,18 @@
+{
+	"sql.lintOnChange": true,
+	"sql.formatOptions": {
+		"language": "plsql",
+		"dialect": "plsql",
+		"tabWidth": 4,
+		"useTabs": false,
+		"keywordCase": "lower",
+		"logicalOperatorNewline": "before",
+		"expressionWidth": 80,
+		"linesBetweenQueries": 0,
+		"denseOperators": false,
+		"newlineBeforeSemicolon": false,
+		"commaPosition": "before",
+		"indentStyle": "standard"
+	},
+	"suggest.autoTrigger": "trigger"
+}
