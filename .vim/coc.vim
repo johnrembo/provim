@@ -175,3 +175,6 @@ nnoremap <silent><nowait> <space>lp  :<C-u>CocListResume<CR>
 "			\]
 
 autocmd FileType sql,plsql setlocal omnifunc=vim_dadbod_completion#omni
+autocmd FileType sql,plsql setlocal formatprg=~/src/sqlcl-formatter-wrapper/sqlaf
+autocmd FileType sql,plsql setlocal formatexpr=
+

@@ -1,5 +1,8 @@
 {
-	"sql.lintOnChange": true,
+	"sql.lintOnOpen": false,
+	"sql.lintOnChange": false,
+	"sql.lintOnSave": false,
+	"sql.database": "guess",
 	"sql.formatOptions": {
 		"language": "plsql",
 		"dialect": "plsql",
@@ -8,7 +11,7 @@
 		"keywordCase": "lower",
 		"logicalOperatorNewline": "before",
 		"expressionWidth": 80,
-		"linesBetweenQueries": 0,
+		"linesBetweenQueries": 1,
 		"denseOperators": false,
 		"newlineBeforeSemicolon": false,
 		"commaPosition": "before",

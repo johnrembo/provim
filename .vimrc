@@ -145,11 +145,11 @@ xnoremap <C-a> <Esc>ggVG
 tnoremap <C-a> <Esc>ggVG
 xnoremap p pgv"@=v:register.'y'<CR>
 
-" yank to system clipboard
-noremap <Leader>y "+y
-noremap <Leader>p "+p
-noremap <Leader>Y "*y
-noremap <Leader>P "*p
+" copy default reg to/from system/mouse clipboard
+noremap <Leader>y :let @+=@"<CR>
+nnoremap <Leader>p :let @"=@+<CR>
+noremap <Leader>Y :let @*=@"<CR>
+nnoremap <Leader>P :let @"=@*<CR>
 
 " do not yank on replace or delete
 vnoremap <Leader>p "_dp
