@@ -44,8 +44,13 @@ set wrap linebreak	   " Soft wrap long lines
 set whichwrap+=[,],h,l " Allow jump between lines when on start or end of line
 set path+=**		   " Fuzzy search in command line
 set wildmenu		   " Tab completion menu
-set cursorline
-set noshowmode " Hide mode indicator, duplicated by status line plugin
+set cursorline		   " Highlight line with cursor
+set noshowmode		   " Hide mode indicator, duplicated by status line plugin
+set undofile		   " Keep undo history between sessions
+set undodir=~/.vim/undo/     " Keep undo files out of file dir
+set directory=~/.vim/swp/  	 " Keep unsaved changes away from file dir
+set backupdir=~/.vim/backup/ " Backups also should not go to git
+
 
 syntax enable		   " Enable syntax highlighting
 filetype on            " Enable filetype plugin
@@ -181,6 +186,11 @@ nnoremap th :belowright terminal<CR><C-\><C-n>:ownsyntax off<CR>:exe 'resize' . 
 set spell spelllang=en_us,ru
 
 " Commands and functions
+" When editing a file, always jump to the last known cursor position.
+autocmd BufReadPost *
+	\ if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit'
+	\ |   exe "normal! g`\""
+	\ | endif
 
 " make tags with respect to .gitignore and do not follow sym links
 command! MakeTags !git ls-files | ctags --links=no -L -
