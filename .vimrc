@@ -32,7 +32,7 @@ set number             " Show line numbers
 set relativenumber     " Use relative line number to cursor
 set tabstop=4          " A tab is four spaces
 set softtabstop=4      " When hitting <BS>, pretend like a tab is removed, even if spaces
-set noexpandtab        " Don't expand tabs to spaces by default
+set expandtab        " Don't expand tabs to spaces by default
 set shiftwidth=4       " Number of spaces to use for autoindenting
 set shiftround         " Use multiple of shiftwidth when indenting with '<' and '>'
 set backspace=indent,eol,start  " Allow backspacing over everything in insert mode

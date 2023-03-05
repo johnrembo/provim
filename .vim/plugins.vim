@@ -41,6 +41,12 @@ Plug 'tpope/vim-dadbod'
 " Conqueror of completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" PHP LSP
+Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
+
+" PHP Code Sniffer
+Plug 'bpearson/vim-phpcs'
+
 " more informative status bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
