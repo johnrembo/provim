@@ -47,6 +47,9 @@ Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --n
 " PHP Code Sniffer
 Plug 'bpearson/vim-phpcs'
 
+" DAP manager
+Plug 'puremourning/vimspector'
+
 " more informative status bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -163,5 +166,5 @@ function! <SID>AutoProjectRootCD()
 endfunction
 autocmd BufEnter * call <SID>AutoProjectRootCD()
 
-
-
+let g:vimspector_enable_mappings = 'HUMAN'
+nmap <leader><F1> :CocCommand java.debug.vimspector.start<CR>

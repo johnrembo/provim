@@ -17,3 +17,6 @@
 !.src/php/example_project/.vim
 !.src/php/example_project/phpcs.xml
 !.src/php/example_project/.php-cs-fixer.dist.php
+!.src/java/hello-maven/pom.xml
+!.src/java/hello-maven/.vimspector.json
+!.src/java/hello-maven/src/
