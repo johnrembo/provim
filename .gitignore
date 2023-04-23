@@ -20,3 +20,5 @@
 !.src/java/hello-maven/pom.xml
 !.src/java/hello-maven/.vimspector.json
 !.src/java/hello-maven/src/
+!.tmux.conf
+!.zshrc
