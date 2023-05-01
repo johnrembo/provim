@@ -21,6 +21,8 @@ keymap.set({ "n", "v" }, "j", "v:count == 0 ? 'gj' : 'j'", expr_opts)
 keymap.set({ "n", "v" }, "k", "v:count == 0 ? 'gk' : 'k'", expr_opts)
 keymap.set({ "n", "v" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", expr_opts)
 keymap.set({ "n", "v" }, "<Up>", "v:count == 0 ? 'gk' : 'k'", expr_opts)
+keymap.set({ "i" }, "<Down>", "v:count == 0 ? '<C-o>gj' : '<C-o>j'", expr_opts)
+keymap.set({ "i" }, "<Up>", "v:count == 0 ? '<C-o>gk' : '<C-o>k'", expr_opts)
 
 -- use jk to exit insert mode
 keymap.set({ "v", "i" }, "\\'", "<ESC>")
