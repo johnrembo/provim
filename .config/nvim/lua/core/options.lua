@@ -1,5 +1,8 @@
 local opt = vim.opt
 
+-- toggle paste mode
+opt.pastetoggle = "<F2>"
+
 -- line number
 opt.relativenumber = true
 opt.number = true
@@ -47,6 +50,6 @@ opt.spell = true
 
 -- redundancy
 opt.undofile = true --  keep undo history between sessions
-opt.undodir = "~/.vim/undo/" -- keep undo files out of file dir
-opt.directory = "~/.vim/swp/" -- keep unsaved changes away from file dir
-opt.backupdir = "~/.vim/backup/" -- backups also should not go to git
+--opt.undodir = vim.fn.expand("~/.vim/undo/") -- keep undo files out of file dir
+--opt.directory = vim.fn.expand("~/.vim/swp/") -- keep unsaved changes away from file dir
+--opt.backupdir = vim.fn.expand("~/.vim/backup/") -- backups also should not go to git

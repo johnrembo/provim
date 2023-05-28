@@ -74,12 +74,6 @@ nnoremap <F3> :set list! list?<CR>
 " toggle line numbers
 nnoremap <F4> :set rnu! \| set nu!<CR>
 
-" display white space characters with F3
-nnoremap <F3> :set list! list?<CR>
-
-" toggle line numbers
-nnoremap <F4> :set rnu! \| set nu!<CR>
-
 " esc in insert & visual mode
 inoremap \' <esc>
 vnoremap \' <esc>
@@ -119,10 +113,10 @@ map <leader>bn :bn<CR>
 map <leader>bp :bp<CR>
 
 " tabs
-map <leader>to :tabnew<CR> 
-map <leader>tx :tabclose<CR>
-map <leader>tn :tabn<CR>
-map <leader>tp :tabp<CR>
+nnoremap <leader>to :tabnew<CR> 
+nnoremap <leader>tx :tabclose<CR>
+nnoremap <leader>tn :tabn<CR>
+nnoremap <leader>tp :tabp<CR>
 
 " shift arrow like gui
 nmap <S-Up> v<Up>

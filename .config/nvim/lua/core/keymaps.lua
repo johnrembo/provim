@@ -15,8 +15,21 @@ cmd("set imsearch=0")
 -- General Keymaps
 ---------------------
 
--- soft wrap remap
 local expr_opts = { noremap = true, expr = true, silent = true }
+
+cmd([[
+" no indent on paste
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+
+" display white space characters with F3
+nnoremap <F3> :set list! list?<CR>
+
+" toggle line numbers
+nnoremap <F4> :set rnu! \| set nu!<CR>
+]])
+
+-- soft wrap remap
 keymap.set({ "n", "v" }, "j", "v:count == 0 ? 'gj' : 'j'", expr_opts)
 keymap.set({ "n", "v" }, "k", "v:count == 0 ? 'gk' : 'k'", expr_opts)
 keymap.set({ "n", "v" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", expr_opts)
