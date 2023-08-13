@@ -1,9 +1,0 @@
-{
-    "phpactor.config": {
-        "language_server_php_cs_fixer.enabled" : true,
-        "language_server_php_cs_fixer.bin": "%project_root%\/tools/php-cs-fixer\/vendor\/bin\/php-cs-fixer"
-    },
-	"[php]" : {
-		"coc.preferences.formatOnSave": true
-	},
-}

@@ -1,6 +1,7 @@
 *
 !documents/*
 !src/sql/*
+!src/mysql/*
 !.gitignore
 !.gitconfig
 !.vimrc
