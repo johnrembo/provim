@@ -1,5 +1,7 @@
 SELECT
-o.
+
 FROM
-T_KZ_OPTIONS o;
+T_KZ_OPTIONS, T_KZ_FUNCTION
+WHERE
+
 -- db#resolve not found

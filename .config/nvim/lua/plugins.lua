@@ -127,7 +127,7 @@ return packer.startup({
 
 		-- database
 
-        use({"vim-scripts/dbext.vim"})
+        use("vim-scripts/dbext.vim")
 
 		use({
 		    "tpope/vim-dadbod",
