@@ -1,5 +1,3 @@
-local dadbod = require("vim-dadbod")
-
 vim.cmd([[
 set nospell
 

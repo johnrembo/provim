@@ -105,16 +105,47 @@ return packer.startup({
 
         -- lsp
         use("neovim/nvim-lspconfig")
+        -- use("dense-analysis/ale")
+        -- use("prabirshrestha/vim-lsp")
+        -- use("rhysd/vim-lsp-ale")
+        
+        use({
+		"gbprod/phpactor.nvim",
+		-- run = require("phpactor.handler.update"), -- To install/update phpactor when installing this plugin
+		requires = {
+			"nvim-lua/plenary.nvim", -- required to update phpactor
+			"neovim/nvim-lspconfig" -- required to automaticly register lsp serveur
+		},
+		config = function()
+	    	require("phpactor").setup({
+                install = {
+                    path = vim.fn.stdpath("data") .. "/opt/",
+                    branch = "master",
+                    bin = vim.fn.expand("$HOME/.local/bin/phpactor"),
+                    php_bin = "php",
+                    composer_bin = "composer",
+                    git_bin = "git",
+                    check_on_startup = "none",
+                  },
+                  lspconfig = {
+                      enabled = true,
+                      options = {},
+                  },
+		      -- your configuration comes here
+		      -- or leave it empty to use the default settings
+		      -- refer to the configuration section below
+    		})
+		end
+	})
 
-
-		-- autocomplete
-		use({
-			"jose-elias-alvarez/null-ls.nvim",
-			config = function()
-				require("null-ls").setup()
-			end,
-			requires = { "nvim-lua/plenary.nvim" },
-		})
+	-- autocomplete
+	use({
+		"jose-elias-alvarez/null-ls.nvim",
+		config = function()
+			require("null-ls").setup()
+		end,
+		requires = { "nvim-lua/plenary.nvim" },
+	})
 
         use("hrsh7th/cmp-nvim-lsp")
         use("hrsh7th/cmp-buffer")

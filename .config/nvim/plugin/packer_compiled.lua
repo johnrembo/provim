@@ -182,6 +182,12 @@ _G.packer_plugins = {
     path = "/home/provim/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["phpactor.nvim"] = {
+    config = { "\27LJ\2\nÌ\2\0\0\a\0\18\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\r\0005\3\b\0006\4\3\0009\4\4\0049\4\5\4'\6\6\0B\4\2\2'\5\a\0&\4\5\4=\4\t\0036\4\3\0009\4\4\0049\4\n\4'\6\v\0B\4\2\2=\4\f\3=\3\14\0025\3\15\0004\4\0\0=\4\16\3=\3\17\2B\0\2\1K\0\1\0\14lspconfig\foptions\1\0\1\fenabled\2\finstall\1\0\0\bbin\30$HOME/.local/bin/phpactor\vexpand\tpath\1\0\5\vbranch\vmaster\21check_on_startup\tnone\fgit_bin\bgit\17composer_bin\rcomposer\fphp_bin\bphp\n/opt/\tdata\fstdpath\afn\bvim\nsetup\rphpactor\frequire\0" },
+    loaded = true,
+    path = "/home/provim/.local/share/nvim/site/pack/packer/start/phpactor.nvim",
+    url = "https://github.com/gbprod/phpactor.nvim"
+  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/provim/.local/share/nvim/site/pack/packer/start/plenary.nvim",
@@ -268,6 +274,10 @@ time([[Config for null-ls.nvim]], false)
 time([[Config for which-key.nvim]], true)
 try_loadstring("\27LJ\2\n‘\1\0\0\b\0\b\1\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\3\0006\3\3\0009\3\4\0039\3\5\3)\5\0\0'\6\6\0005\a\a\0B\3\4\0?\3\0\0B\0\2\1K\0\1\0\1\0\1\abg\f#1f2335\18WhichKeyFloat\16nvim_set_hl\bapi\bvim\nsetup\14which-key\frequire\3€€À™\4\0", "config", "which-key.nvim")
 time([[Config for which-key.nvim]], false)
+-- Config for: phpactor.nvim
+time([[Config for phpactor.nvim]], true)
+try_loadstring("\27LJ\2\nÌ\2\0\0\a\0\18\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\r\0005\3\b\0006\4\3\0009\4\4\0049\4\5\4'\6\6\0B\4\2\2'\5\a\0&\4\5\4=\4\t\0036\4\3\0009\4\4\0049\4\n\4'\6\v\0B\4\2\2=\4\f\3=\3\14\0025\3\15\0004\4\0\0=\4\16\3=\3\17\2B\0\2\1K\0\1\0\14lspconfig\foptions\1\0\1\fenabled\2\finstall\1\0\0\bbin\30$HOME/.local/bin/phpactor\vexpand\tpath\1\0\5\vbranch\vmaster\21check_on_startup\tnone\fgit_bin\bgit\17composer_bin\rcomposer\fphp_bin\bphp\n/opt/\tdata\fstdpath\afn\bvim\nsetup\rphpactor\frequire\0", "config", "phpactor.nvim")
+time([[Config for phpactor.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]
@@ -276,6 +286,20 @@ time([[Sequenced loading]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
+pcall(vim.api.nvim_create_user_command, 'DBUILastQueryInfo', function(cmdargs)
+          require('packer.load')({'vim-dadbod'}, { cmd = 'DBUILastQueryInfo', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'vim-dadbod'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('DBUILastQueryInfo ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'DBUIToggle', function(cmdargs)
+          require('packer.load')({'vim-dadbod'}, { cmd = 'DBUIToggle', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'vim-dadbod'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('DBUIToggle ', 'cmdline')
+      end})
 pcall(vim.api.nvim_create_user_command, 'DBUI', function(cmdargs)
           require('packer.load')({'vim-dadbod'}, { cmd = 'DBUI', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
@@ -303,20 +327,6 @@ pcall(vim.api.nvim_create_user_command, 'DBUIRenameBuffer', function(cmdargs)
         {nargs = '*', range = true, bang = true, complete = function()
           require('packer.load')({'vim-dadbod'}, {}, _G.packer_plugins)
           return vim.fn.getcompletion('DBUIRenameBuffer ', 'cmdline')
-      end})
-pcall(vim.api.nvim_create_user_command, 'DBUILastQueryInfo', function(cmdargs)
-          require('packer.load')({'vim-dadbod'}, { cmd = 'DBUILastQueryInfo', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'vim-dadbod'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('DBUILastQueryInfo ', 'cmdline')
-      end})
-pcall(vim.api.nvim_create_user_command, 'DBUIToggle', function(cmdargs)
-          require('packer.load')({'vim-dadbod'}, { cmd = 'DBUIToggle', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'vim-dadbod'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('DBUIToggle ', 'cmdline')
       end})
 time([[Defining lazy-load commands]], false)
 

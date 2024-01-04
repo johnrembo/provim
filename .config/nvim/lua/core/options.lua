@@ -53,3 +53,7 @@ opt.undofile = true --  keep undo history between sessions
 --opt.undodir = vim.fn.expand("~/.vim/undo/") -- keep undo files out of file dir
 --opt.directory = vim.fn.expand("~/.vim/swp/") -- keep unsaved changes away from file dir
 --opt.backupdir = vim.fn.expand("~/.vim/backup/") -- backups also should not go to git
+					 	
+-- hide mode indicator
+opt.showmode = false
+	
