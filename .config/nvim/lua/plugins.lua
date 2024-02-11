@@ -69,6 +69,9 @@ return packer.startup({
         -- file explorer
         use("nvim-tree/nvim-tree.lua")
 
+        -- language tool
+        use("dpelle/vim-LanguageTool")
+
         -- tag bar
         use("majutsushi/tagbar")
 

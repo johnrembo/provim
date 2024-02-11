@@ -262,6 +262,11 @@ _G.packer_plugins = {
     path = "/home/provim/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["vim-LanguageTool"] = {
+    loaded = true,
+    path = "/home/provim/.local/share/nvim/site/pack/packer/start/vim-LanguageTool",
+    url = "https://github.com/dpelle/vim-LanguageTool"
+  },
   ["vim-color-forest-night"] = {
     loaded = true,
     path = "/home/provim/.local/share/nvim/site/pack/packer/start/vim-color-forest-night",
