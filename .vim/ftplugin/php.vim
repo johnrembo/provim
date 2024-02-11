@@ -16,3 +16,5 @@ vmap <buffer> <silent> <Leader>lee :<C-u>PhpactorExtractExpression<CR>
 vmap <buffer> <silent> <Leader>lem :<C-u>PhpactorExtractMethod<CR>
 
 let Vimphpcs_Standard='PSR12'
+
+autocmd FileType php set iskeyword+=$
